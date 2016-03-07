@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016 | Hexo</title>
+  <title>Hexo 使用 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="改用hexo 来搭建blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 使用">
+<meta property="og:url" content="http://yoursite.com/2016/03/07/Hexo-install/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+<meta property="og:description" content="改用hexo 来搭建blog">
+<meta property="og:updated_time" content="2016-03-07T06:36:37.114Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Hexo 使用">
+<meta name="twitter:description" content="改用hexo 来搭建blog">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -38,8 +39,8 @@
           fancybox: true,
           animate: true,
           isHome: false,
-          isPost: false,
-          isArchive: true,
+          isPost: true,
+          isArchive: false,
           isTag: false,
           isCategory: false,
           open_in_new: false
@@ -240,58 +241,205 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-Hexo-install" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/03/07/Hexo-install/" class="archive-article-date">
-      <time datetime="2016-03-07T05:58:00.000Z" itemprop="datePublished">03-07</time>
+    <div class="article-meta">
+      <a href="/2016/03/07/Hexo-install/" class="article-date">
+      <time datetime="2016-03-07T05:58:00.000Z" itemprop="datePublished">2016-03-07</time>
 </a>
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/07/Hexo-install/">Hexo 使用</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo 使用
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
     </div>
 
 
-          
+        
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>　　<strong> Hexo 主题：</strong>已经开始准备养成写博客的习惯，发现Hexo 快速、简洁且高效的博客框架，所以开始学习使用，部署在git 上面。<br><a id="more"></a><br><a href="http://luuman.github.io/2015/12/21/GitHub+Hexo/" target="_blank" rel="external">文章链接</a>   </p>
+<h1 id="Hexo-的安装"><a href="#Hexo-的安装" class="headerlink" title="Hexo 的安装 "></a>Hexo 的安装 </h1><p>网上已经有了很详细的参考文档，可以参考下面：<br><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a> </p>
+<h2 id="安装命令："><a href="#安装命令：" class="headerlink" title="安装命令："></a>安装命令：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli 安装应该是使用这个</span><br></pre></td></tr></table></figure>
+<p>上面的写的是整个比较详细的搭建，但是里面有些写的不完整，<br>比如使用 hexo d 命令的时候，没有说明要先安装git deploy 插件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">Edit settings.</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &lt;repository url&gt;</span><br><span class="line">  branch: [branch]</span><br><span class="line">  message: [message]</span><br></pre></td></tr></table></figure></p>
+<h2 id="一、安装准备："><a href="#一、安装准备：" class="headerlink" title="一、安装准备："></a>一、安装准备：</h2><blockquote>
+<p>环境搭建：<br>1.多个git账号之间的切换<br><em>因为原来使用的git 账号已经不使用了，在更换新的账号时候发现多个账号之前不能识别，不能提交到新的远程git 上去。</em><br><a href="http://memoryboxes.github.io/blog/2014/12/07/duo-ge-gitzhang-hao-zhi-jian-de-qie-huan/" target="_blank" rel="external">多个git账号之间的切换</a><br><a href="http://blog.lessfun.com/blog/2014/06/11/two-github-account-in-one-client/" target="_blank" rel="external">Mac上多个git账号之间的切换</a><br>    参考上面的内容，但是本地配置然后还是提交到之前的账号，不知道是不是里面配置顺序的问题，后来的解决方法是把之前<br>    的git 上的SSH key 的删除掉就可以了，好像有点暴力 0<em>0…</em></p>
+</blockquote>
+<p>2.Error: Permission to user/repo denied to other-user<br>    机器甲上曾经使用过一个私人github账号A，并且添加了ssh验证<br>    后来为了公共开发，又创建了一个github账号B，提交的时候发现出现错误: remote: Permission to user_B/xxx.git denied to user_A<br>    使用git config, git log 查看用户名都是账号B<br>    github上的解决方法（<a href="https://help.github.com/articles/error-permission-to-user-repo-denied-to-other-user/）不适合，因为该项目是B创建的，并不属于A" target="_blank" rel="external">https://help.github.com/articles/error-permission-to-user-repo-denied-to-other-user/）不适合，因为该项目是B创建的，并不属于A</a><br>    按照<a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank" rel="external">https://help.github.com/articles/generating-ssh-keys/</a> 方法重新创建，还是一样的错误<br>    最后尝试将https 换成 git （<a href="https://help.github.com/articles/changing-a-remote-s-url/）" target="_blank" rel="external">https://help.github.com/articles/changing-a-remote-s-url/）</a><br>    git remote set-url origin git@github/…     </p>
+
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/03/07/Hexo-install/">Hexo 使用</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Louis Wang 的个人博客">Louis Wang</a></p>
+        <p><span>发布时间:</span>2016年03月07日 - 13时58分</p>
+        <p><span>最后更新:</span>2016年03月07日 - 14时36分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/07/Hexo-install/" title="Hexo 使用">http://yoursite.com/2016/03/07/Hexo-install/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/07/Hexo-install/　　作者: Louis Wang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo-的安装"><span class="toc-number">1.</span> <span class="toc-text">Hexo 的安装 </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装命令："><span class="toc-number">1.1.</span> <span class="toc-text">安装命令：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、安装准备："><span class="toc-number">1.2.</span> <span class="toc-text">一、安装准备：</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/03/07/Hexo-install/" data-title="Hexo 使用" data-url="http://yoursite.com/2016/03/07/Hexo-install/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"luums"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
 
     
 
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/07/Hexo-install/">Hexo 使用</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
@@ -355,17 +503,6 @@
         };
     })
 </script>
-
-    <button class="hide-labels">TAG 开关</button>
-    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js">
-    </script>
-    <script>
-        $(document).ready(function() {
-            $("button").click(function() {
-                $(".article-info").toggle(200);
-            });
-        });
-    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>

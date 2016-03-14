@@ -2877,6 +2877,26 @@ color
 #toc .toc-link:hover {
   background: rgba(158,188,226,0.21);
 }
+.bdshare-button-style2-24 {
+  width: 330px;
+  margin: auto;
+}
+.bdshare-button-style2-24 .fx {
+  color: #999;
+  padding: 0;
+  margin: 6px;
+  height: 54px;
+  display: inline-block;
+  font: normal normal normal 36px/1 FontAwesome;
+  background: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.bdshare-button-style2-24 .fx:hover {
+  color: #fff;
+  opacity: 1;
+}
 .copyright {
   width: 85%;
   max-width: 45em;

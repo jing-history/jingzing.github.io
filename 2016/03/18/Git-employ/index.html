@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo 使用 | 似水流年</title>
+  <title>Git 使用问题 | 似水流年</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="改用hexo 来搭建blog">
+  <meta name="description" content="Git 使用过程中碰到的问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 使用">
-<meta property="og:url" content="http://yoursite.com/2016/03/07/Hexo-install/index.html">
+<meta property="og:title" content="Git 使用问题">
+<meta property="og:url" content="http://yoursite.com/2016/03/18/Git-employ/index.html">
 <meta property="og:site_name" content="似水流年">
-<meta property="og:description" content="改用hexo 来搭建blog">
-<meta property="og:updated_time" content="2016-03-18T03:43:55.261Z">
+<meta property="og:description" content="Git 使用过程中碰到的问题">
+<meta property="og:updated_time" content="2016-03-18T09:20:23.576Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo 使用">
-<meta name="twitter:description" content="改用hexo 来搭建blog">
+<meta name="twitter:title" content="Git 使用问题">
+<meta name="twitter:description" content="Git 使用过程中碰到的问题">
   
     <link rel="alternative" href="/atom.xml" title="似水流年" type="application/atom+xml">
   
@@ -215,11 +215,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Hexo-install" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Git-employ" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/07/Hexo-install/" class="article-date">
-      <time datetime="2016-03-07T05:58:00.000Z" itemprop="datePublished">2016-03-07</time>
+      <a href="/2016/03/18/Git-employ/" class="article-date">
+      <time datetime="2016-03-18T03:30:00.000Z" itemprop="datePublished">2016-03-18</time>
 </a>
     </div>
   
@@ -232,7 +232,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo 使用
+      Git 使用问题
     </h1>
   
 
@@ -241,13 +241,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+    <a class="article-category-link" href="/categories/Git/">Git</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/知识/">知识</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/问题/">问题</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -257,13 +257,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>　　<strong> Hexo 主题：</strong>已经开始准备养成写博客的习惯，发现Hexo 快速、简洁且高效的博客框架，所以开始学习使用，部署在git 上面。<br><a href="http://luuman.github.io/2015/12/21/GitHub+Hexo/" target="_blank" rel="external">文章链接</a>   </p>
-<h1 id="Hexo-的安装"><a href="#Hexo-的安装" class="headerlink" title="Hexo 的安装 "></a>Hexo 的安装 </h1><p>网上已经有了很详细的参考文档，可以参考下面：<br><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a> </p>
-<h2 id="安装命令："><a href="#安装命令：" class="headerlink" title="安装命令："></a>安装命令：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli 安装应该是使用这个</span><br></pre></td></tr></table></figure>
-<p>上面的写的是整个比较详细的搭建，但是里面有些写的不完整，<br>比如使用 hexo d 命令的时候，没有说明要先安装git deploy 插件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">Edit settings.</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &lt;repository url&gt;</span><br><span class="line">  branch: [branch]</span><br><span class="line">  message: [message]</span><br></pre></td></tr></table></figure></p>
-<h2 id="一、安装准备："><a href="#一、安装准备：" class="headerlink" title="一、安装准备："></a>一、安装准备：</h2><blockquote>
-<p>环境搭建：<br>1.多个git账号之间的切换<br><em>因为原来使用的git 账号已经不使用了，在更换新的账号时候发现多个账号之前不能识别，不能提交到新的远程git 上去。</em><br><a href="http://memoryboxes.github.io/blog/2014/12/07/duo-ge-gitzhang-hao-zhi-jian-de-qie-huan/" target="_blank" rel="external">多个git账号之间的切换</a><br><a href="http://blog.lessfun.com/blog/2014/06/11/two-github-account-in-one-client/" target="_blank" rel="external">Mac上多个git账号之间的切换</a><br>    参考上面的内容，但是本地配置然后还是提交到之前的账号，不知道是不是里面配置顺序的问题，后来的解决方法是把之前<br>    的git 上的SSH key 的删除掉就可以了，好像有点暴力 0<em>0…</em><br>2.Error: Permission to user/repo denied to other-user<br>    机器甲上曾经使用过一个私人github账号A，并且添加了ssh验证<br>    后来为了公共开发，又创建了一个github账号B，提交的时候发现出现错误: remote: Permission to user_B/xxx.git denied to user_A<br>    使用git config, git log 查看用户名都是账号B<br>    github上的解决方法（<a href="https://help.github.com/articles/error-permission-to-user-repo-denied-to-other-user/）不适合，因为该项目是B创建的，并不属于A" target="_blank" rel="external">https://help.github.com/articles/error-permission-to-user-repo-denied-to-other-user/）不适合，因为该项目是B创建的，并不属于A</a><br>    按照<a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank" rel="external">https://help.github.com/articles/generating-ssh-keys/</a> 方法重新创建，还是一样的错误<br>    最后尝试将https 换成 git （<a href="https://help.github.com/articles/changing-a-remote-s-url/）" target="_blank" rel="external">https://help.github.com/articles/changing-a-remote-s-url/）</a><br>    git remote set-url origin git@github/…     </p>
-</blockquote>
+        <h1 id="Git-使用和问题总结"><a href="#Git-使用和问题总结" class="headerlink" title="Git 使用和问题总结 "></a>Git 使用和问题总结 </h1><h2 id="1-解决github-push错误The-requested-URL-returned-error-403-Forbidden-while-accessing"><a href="#1-解决github-push错误The-requested-URL-returned-error-403-Forbidden-while-accessing" class="headerlink" title="1.解决github push错误The requested URL returned error: 403 Forbidden while accessing"></a>1.解决github push错误The requested URL returned error: 403 Forbidden while accessing</h2><p><a href="http://houzhiqingjava.blog.163.com/blog/static/167399507201472343324562" target="_blank" rel="external">参考链接</a> </p>
+<h3 id="使用git-提交的时候提示以下内容："><a href="#使用git-提交的时候提示以下内容：" class="headerlink" title="使用git 提交的时候提示以下内容："></a>使用git 提交的时候提示以下内容：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[git@AYZ github01]$ git push -u origin master</span><br><span class="line">error: The requested URL returned error: 403 Forbidden while accessing</span><br><span class="line">https://github.com/jingzing/JingJourney.git</span><br></pre></td></tr></table></figure>
+<h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vi .git/config</span><br><span class="line"></span><br><span class="line"># 将</span><br><span class="line">[remote &quot;origin&quot;]  </span><br><span class="line">    url = https://github.com/jingzing/JingJourney.git</span><br><span class="line">修改为：</span><br><span class="line">[remote &quot;origin&quot;]</span><br><span class="line">url = https://jingzing@github.com/jingzing/JingJourney.git</span><br></pre></td></tr></table></figure>
+<h3 id="总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark-下。"><a href="#总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark-下。" class="headerlink" title="总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark 下。"></a>总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark 下。</h3><h2 id="2-git-pull-push没有指定branch报错的解决方法"><a href="#2-git-pull-push没有指定branch报错的解决方法" class="headerlink" title="2.git pull push没有指定branch报错的解决方法"></a>2.git pull push没有指定branch报错的解决方法</h2><p><a href="https://www.netroby.com/view/3203" target="_blank" rel="external">参考链接</a></p>
+<h3 id="git-执行git-push-和git-pull的操作时候，经常看到下面的提示："><a href="#git-执行git-push-和git-pull的操作时候，经常看到下面的提示：" class="headerlink" title="git 执行git push 和git pull的操作时候，经常看到下面的提示："></a>git 执行git push 和git pull的操作时候，经常看到下面的提示：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">You asked me to pull without telling me which branch you</span><br><span class="line">want to merge with, and &apos;branch.dev.merge&apos; in</span><br><span class="line">your configuration file does not tell me, either. Please</span><br><span class="line">specify which branch you want to use on the command line and</span><br><span class="line">try again (e.g. &apos;git pull &lt;repository&gt; &lt;refspec&gt;&apos;).</span><br><span class="line">See git-pull(1) for details.</span><br><span class="line"></span><br><span class="line">If you often merge with the same branch, you may want to</span><br><span class="line">use something like the following in your configuration file:</span><br><span class="line"></span><br><span class="line">[branch &quot;dev&quot;]</span><br><span class="line">remote = &lt;nickname&gt;</span><br><span class="line">merge = &lt;remote-ref&gt;</span><br><span class="line"></span><br><span class="line">[remote &quot;&lt;nickname&gt;&quot;]</span><br><span class="line">url = &lt;url&gt;</span><br><span class="line">fetch = &lt;refspec&gt;</span><br><span class="line"></span><br><span class="line">See git-config(1) for details.</span><br></pre></td></tr></table></figure>
+<h3 id="在高版本的-git下面，也许会看见这样的提示："><a href="#在高版本的-git下面，也许会看见这样的提示：" class="headerlink" title="在高版本的 git下面，也许会看见这样的提示："></a>在高版本的 git下面，也许会看见这样的提示：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">There is no tracking information for the current branch.</span><br><span class="line"></span><br><span class="line">Please specify which branch you want to merge with.</span><br><span class="line"></span><br><span class="line">See git-pull(1) for details</span><br><span class="line"></span><br><span class="line">git pull &lt;remote&gt; &lt;branch&gt;</span><br><span class="line"></span><br><span class="line">If you wish to set tracking information for this branch you can do so with</span><br><span class="line"></span><br><span class="line">git branch --set-upstream master origin/&lt;branch&gt;</span><br><span class="line"></span><br><span class="line">看到第二个提示，我们现在知道了一种解决方案。也就是指定当前工作目录工作分支，跟远程的仓库，分支之间的链接关系。</span><br><span class="line"></span><br><span class="line">比如我们设置master对应远程仓库的master分支</span><br><span class="line"></span><br><span class="line">git branch --set-upstream master origin/master</span><br><span class="line"></span><br><span class="line">这样在我们每次想push或者pull的时候，只需要 输入git push 或者git pull即可。</span><br><span class="line"></span><br><span class="line">在此之前，我们必须要指定想要push或者pull的远程分支。</span><br><span class="line"></span><br><span class="line">git push origin master</span><br><span class="line"></span><br><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -272,13 +271,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/07/Hexo-install/">Hexo 使用</a></p>
+        <p><span>本文标题:</span><a href="/2016/03/18/Git-employ/">Git 使用问题</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 JingZing 的个人博客">JingZing</a></p>
-        <p><span>发布时间:</span>2016年03月07日 - 13时58分</p>
-        <p><span>最后更新:</span>2016年03月18日 - 11时43分</p>
+        <p><span>发布时间:</span>2016年03月18日 - 11时30分</p>
+        <p><span>最后更新:</span>2016年03月18日 - 17时20分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/07/Hexo-install/" title="Hexo 使用">http://yoursite.com/2016/03/07/Hexo-install/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/07/Hexo-install/　　作者: JingZing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/18/Git-employ/" title="Git 使用问题">http://yoursite.com/2016/03/18/Git-employ/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/18/Git-employ/　　作者: JingZing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -291,15 +290,11 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/03/18/Git-employ/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Git 使用问题
-        
-      </div>
-    </a>
   
+    <a href="/2016/03/07/Hexo-install/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo 使用</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -308,7 +303,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo-的安装"><span class="toc-number">1.</span> <span class="toc-text">Hexo 的安装 </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装命令："><span class="toc-number">1.1.</span> <span class="toc-text">安装命令：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、安装准备："><span class="toc-number">1.2.</span> <span class="toc-text">一、安装准备：</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-使用和问题总结"><span class="toc-number">1.</span> <span class="toc-text">Git 使用和问题总结 </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-解决github-push错误The-requested-URL-returned-error-403-Forbidden-while-accessing"><span class="toc-number">1.1.</span> <span class="toc-text">1.解决github push错误The requested URL returned error: 403 Forbidden while accessing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用git-提交的时候提示以下内容："><span class="toc-number">1.1.1.</span> <span class="toc-text">使用git 提交的时候提示以下内容：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决办法："><span class="toc-number">1.1.2.</span> <span class="toc-text">解决办法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark-下。"><span class="toc-number">1.1.3.</span> <span class="toc-text">总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark 下。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-git-pull-push没有指定branch报错的解决方法"><span class="toc-number">1.2.</span> <span class="toc-text">2.git pull push没有指定branch报错的解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git-执行git-push-和git-pull的操作时候，经常看到下面的提示："><span class="toc-number">1.2.1.</span> <span class="toc-text">git 执行git push 和git pull的操作时候，经常看到下面的提示：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在高版本的-git下面，也许会看见这样的提示："><span class="toc-number">1.2.2.</span> <span class="toc-text">在高版本的 git下面，也许会看见这样的提示：</span></a></li></ol></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -370,7 +365,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/03/07/Hexo-install/" data-title="Hexo 使用" data-url="http://yoursite.com/2016/03/07/Hexo-install/"></div>
+    <div class="ds-thread" data-thread-key="2016/03/18/Git-employ/" data-title="Git 使用问题" data-url="http://yoursite.com/2016/03/18/Git-employ/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -393,13 +388,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/03/18/Git-employ/" title="上一篇: Git 使用问题">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/03/07/Hexo-install/" title="下一篇: Hexo 使用">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/18/Git-employ/">Git 使用问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/07/Hexo-install/">Hexo 使用</a></li></ul>

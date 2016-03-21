@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Git 使用问题 | 似水流年</title>
+  <title>VIM使用教程 | 似水流年</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Git 使用过程中碰到的问题">
+  <meta name="description" content="VIM快捷键和操作的使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git 使用问题">
-<meta property="og:url" content="http://yoursite.com/2016/03/18/Git-employ/index.html">
+<meta property="og:title" content="VIM使用教程">
+<meta property="og:url" content="http://yoursite.com/2016/03/21/Vim-employ/index.html">
 <meta property="og:site_name" content="似水流年">
-<meta property="og:description" content="Git 使用过程中碰到的问题">
-<meta property="og:updated_time" content="2016-03-18T09:20:23.576Z">
+<meta property="og:description" content="VIM快捷键和操作的使用">
+<meta property="og:updated_time" content="2016-03-21T09:32:52.351Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git 使用问题">
-<meta name="twitter:description" content="Git 使用过程中碰到的问题">
+<meta name="twitter:title" content="VIM使用教程">
+<meta name="twitter:description" content="VIM快捷键和操作的使用">
   
     <link rel="alternative" href="/atom.xml" title="似水流年" type="application/atom+xml">
   
@@ -215,11 +215,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Git-employ" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Vim-employ" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/18/Git-employ/" class="article-date">
-      <time datetime="2016-03-18T03:30:00.000Z" itemprop="datePublished">2016-03-18</time>
+      <a href="/2016/03/21/Vim-employ/" class="article-date">
+      <time datetime="2016-03-21T09:30:00.000Z" itemprop="datePublished">2016-03-21</time>
 </a>
     </div>
   
@@ -232,7 +232,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Git 使用问题
+      VIM使用教程
     </h1>
   
 
@@ -241,13 +241,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Git/">Git</a>
+    <a class="article-category-link" href="/categories/VIM/">VIM</a><a class="article-category-link" href="/categories/VIM/tool/">tool</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/知识/">知识</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/问题/">问题</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VIM/">VIM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tutorial/">tutorial</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -257,12 +257,118 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Git-使用和问题总结"><a href="#Git-使用和问题总结" class="headerlink" title="Git 使用和问题总结 "></a>Git 使用和问题总结 </h1><h2 id="1-解决github-push错误The-requested-URL-returned-error-403-Forbidden-while-accessing"><a href="#1-解决github-push错误The-requested-URL-returned-error-403-Forbidden-while-accessing" class="headerlink" title="1.解决github push错误The requested URL returned error: 403 Forbidden while accessing"></a>1.解决github push错误The requested URL returned error: 403 Forbidden while accessing</h2><p><a href="http://houzhiqingjava.blog.163.com/blog/static/167399507201472343324562" target="_blank" rel="external">参考链接</a> </p>
-<h3 id="使用git-提交的时候提示以下内容："><a href="#使用git-提交的时候提示以下内容：" class="headerlink" title="使用git 提交的时候提示以下内容："></a>使用git 提交的时候提示以下内容：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[git@AYZ github01]$ git push -u origin master</span><br><span class="line">error: The requested URL returned error: 403 Forbidden while accessing</span><br><span class="line">https://github.com/jingzing/JingJourney.git</span><br></pre></td></tr></table></figure>
-<h3 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vi .git/config</span><br><span class="line"></span><br><span class="line"># 将</span><br><span class="line">[remote &quot;origin&quot;]  </span><br><span class="line">    url = https://github.com/jingzing/JingJourney.git</span><br><span class="line">修改为：</span><br><span class="line">[remote &quot;origin&quot;]</span><br><span class="line">url = https://jingzing@github.com/jingzing/JingJourney.git</span><br></pre></td></tr></table></figure>
-<h3 id="总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark-下。"><a href="#总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark-下。" class="headerlink" title="总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark 下。"></a>总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark 下。</h3><h2 id="2-git-pull-push没有指定branch报错的解决方法"><a href="#2-git-pull-push没有指定branch报错的解决方法" class="headerlink" title="2.git pull push没有指定branch报错的解决方法"></a>2.git pull push没有指定branch报错的解决方法</h2><p><a href="https://www.netroby.com/view/3203" target="_blank" rel="external">参考链接</a></p>
-<h3 id="git-执行git-push-和git-pull的操作时候，经常看到下面的提示："><a href="#git-执行git-push-和git-pull的操作时候，经常看到下面的提示：" class="headerlink" title="git 执行git push 和git pull的操作时候，经常看到下面的提示："></a>git 执行git push 和git pull的操作时候，经常看到下面的提示：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">You asked me to pull without telling me which branch you</span><br><span class="line">want to merge with, and &apos;branch.dev.merge&apos; in</span><br><span class="line">your configuration file does not tell me, either. Please</span><br><span class="line">specify which branch you want to use on the command line and</span><br><span class="line">try again (e.g. &apos;git pull &lt;repository&gt; &lt;refspec&gt;&apos;).</span><br><span class="line">See git-pull(1) for details.</span><br><span class="line"></span><br><span class="line">If you often merge with the same branch, you may want to</span><br><span class="line">use something like the following in your configuration file:</span><br><span class="line"></span><br><span class="line">[branch &quot;dev&quot;]</span><br><span class="line">remote = &lt;nickname&gt;</span><br><span class="line">merge = &lt;remote-ref&gt;</span><br><span class="line"></span><br><span class="line">[remote &quot;&lt;nickname&gt;&quot;]</span><br><span class="line">url = &lt;url&gt;</span><br><span class="line">fetch = &lt;refspec&gt;</span><br><span class="line"></span><br><span class="line">See git-config(1) for details.</span><br></pre></td></tr></table></figure>
-<h3 id="在高版本的-git下面，也许会看见这样的提示："><a href="#在高版本的-git下面，也许会看见这样的提示：" class="headerlink" title="在高版本的 git下面，也许会看见这样的提示："></a>在高版本的 git下面，也许会看见这样的提示：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">There is no tracking information for the current branch.</span><br><span class="line"></span><br><span class="line">Please specify which branch you want to merge with.</span><br><span class="line"></span><br><span class="line">See git-pull(1) for details</span><br><span class="line"></span><br><span class="line">git pull &lt;remote&gt; &lt;branch&gt;</span><br><span class="line"></span><br><span class="line">If you wish to set tracking information for this branch you can do so with</span><br><span class="line"></span><br><span class="line">git branch --set-upstream master origin/&lt;branch&gt;</span><br><span class="line"></span><br><span class="line">看到第二个提示，我们现在知道了一种解决方案。也就是指定当前工作目录工作分支，跟远程的仓库，分支之间的链接关系。</span><br><span class="line"></span><br><span class="line">比如我们设置master对应远程仓库的master分支</span><br><span class="line"></span><br><span class="line">git branch --set-upstream master origin/master</span><br><span class="line"></span><br><span class="line">这样在我们每次想push或者pull的时候，只需要 输入git push 或者git pull即可。</span><br><span class="line"></span><br><span class="line">在此之前，我们必须要指定想要push或者pull的远程分支。</span><br><span class="line"></span><br><span class="line">git push origin master</span><br><span class="line"></span><br><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+        <h1 id="VIM-使用教程"><a href="#VIM-使用教程" class="headerlink" title="VIM 使用教程"></a>VIM 使用教程</h1><p><a href="http://beiyuu.com/git-vim-tutorial/" target="_blank" rel="external">文章转载自：</a> </p>
+<p><strong> 第一次使用VIM </strong>，会觉得无所适从，他并不像记事本，你敲什么键就显示什么，理解VIM的需要明白他的两种模式： - 命令模式 (Command Mode) - 编辑模式 (Insert Mode)</p>
+<p>命令模式下，可以做移动、编辑操作；编辑模式则用来输入。键入i,o,s,a等即可进入编辑模式，后面解释原因。</p>
+<p>模式的设计是VIM和其他编辑器最不同的地方，优势和劣势也全基于此而生。</p>
+<h2 id="基本操作-以下介绍的键盘操作，都是大小写敏感的，并且要在命令模式下完成，需注意-："><a href="#基本操作-以下介绍的键盘操作，都是大小写敏感的，并且要在命令模式下完成，需注意-：" class="headerlink" title="基本操作(以下介绍的键盘操作，都是大小写敏感的，并且要在命令模式下完成，需注意)："></a>基本操作(以下介绍的键盘操作，都是大小写敏感的，并且要在命令模式下完成，需注意)：</h2><h3 id="以字为单位的移动"><a href="#以字为单位的移动" class="headerlink" title="以字为单位的移动"></a>以字为单位的移动</h3><blockquote>
+<ul>
+<li>h 向左移动一个字</li>
+<li>j 向下移动一行</li>
+<li>k 向上</li>
+<li>l 向右</li>
+</ul>
+</blockquote>
+<p>这四个键在右手最容易碰到几个位置，最为常用。</p>
+<h3 id="以词为单位的移动："><a href="#以词为单位的移动：" class="headerlink" title="以词为单位的移动："></a>以词为单位的移动：</h3><blockquote>
+<ul>
+<li>w 下一個word w(ord)</li>
+<li>W 下一個word(跳过标点)</li>
+<li>b 前一個word b(ackward)</li>
+<li>B 前一个word(跳过标点)</li>
+<li>e 跳到当前word的尾端 e(nd)</li>
+</ul>
+</blockquote>
+<h3 id="行移动："><a href="#行移动：" class="headerlink" title="行移动："></a>行移动：</h3><blockquote>
+<ul>
+<li>0 跳到当前行的开头</li>
+<li>^ 跳到当前行第一个非空字符</li>
+<li>$ 跳到行尾<br>助记：0(第0个字符),^和$含义同正则表达式</li>
+</ul>
+</blockquote>
+<h3 id="段落移动："><a href="#段落移动：" class="headerlink" title="段落移动："></a>段落移动：</h3><blockquote>
+<ul>
+<li>{ 上一段(以空白行分隔)</li>
+<li>} 下一段(以空白行分隔)</li>
+<li>% 跳到当前对应的括号上(适用各种配对符号)</li>
+</ul>
+</blockquote>
+<h3 id="跳跃移动："><a href="#跳跃移动：" class="headerlink" title="跳跃移动："></a>跳跃移动：</h3><blockquote>
+<ul>
+<li>/xxxx 搜索xxxx，然后可以用n下一个，N上一个移动</li>
+<li><h1 id="向前搜索光标当前所在的字"><a href="#向前搜索光标当前所在的字" class="headerlink" title="向前搜索光标当前所在的字"></a>向前搜索光标当前所在的字</h1></li>
+<li><ul>
+<li>向后搜索光标当前所在的字</li>
+</ul>
+</li>
+<li>fx 在当前行移动到光标之后第一个字符x的位置 f(ind)x</li>
+<li>gd 跳到光标所在位置词(word)的定义位置 g(o)d(efine)</li>
+<li>gg 到文档顶部</li>
+<li>G 到文档底部</li>
+<li>:x 跳到第x行(x是行号)</li>
+<li>ctrl+d 向下翻页 d(down)</li>
+<li>ctrl+u 向上翻页 u(p)</li>
+</ul>
+</blockquote>
+<h2 id="基本编辑"><a href="#基本编辑" class="headerlink" title="基本编辑"></a>基本编辑</h2><h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><blockquote>
+<ul>
+<li>i 在光标当前位置向前插入 i(nsert)</li>
+<li>I 在本行第一个字符前插入</li>
+<li>a 在光标当前位置向后插入 a(fter)</li>
+<li>A 在本行末尾插入</li>
+<li>o 向下插入一行</li>
+<li>O 向上插入一行</li>
+<li>:w 保存</li>
+<li>:q 退出</li>
+<li>:wq 保存并退出</li>
+</ul>
+</blockquote>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><blockquote>
+<ul>
+<li>x 删除当前字符</li>
+<li>dd 删除当前行 d(elete)</li>
+<li>dw 删除当前光标下的词 d(elete)w(ord)</li>
+</ul>
+</blockquote>
+<h3 id="复制粘贴"><a href="#复制粘贴" class="headerlink" title="复制粘贴"></a>复制粘贴</h3><blockquote>
+<ul>
+<li>yy 复制当前行 y(ank)</li>
+<li>yw 复制当前光标下的词 y(ank)w(ord)</li>
+<li>p 粘贴 p(aste)</li>
+<li>P 粘贴在当前位置之前</li>
+</ul>
+</blockquote>
+<h2 id="进阶操作"><a href="#进阶操作" class="headerlink" title="进阶操作"></a>进阶操作</h2><p>限于篇幅，在这里我仅介绍下我非常常用的几个操作。</p>
+<h3 id="重复操作"><a href="#重复操作" class="headerlink" title="重复操作"></a>重复操作</h3><p>因为VIM所有的操作都是原子化的，所以把这些操作程序化就非常简单了：</p>
+<blockquote>
+<ul>
+<li>5w 相当于按五次w键；</li>
+<li>6j 下移6行，相当于按六次j；</li>
+<li>3J 大写J,本来是将下一行与当前行合并，加上数量，就是重复操作3次；</li>
+<li>6dw和d6w 结果是一样，就是删除6个word；</li>
+<li>剩下的无数情况，自己类推吧。</li>
+</ul>
+</blockquote>
+<h3 id="高效编辑"><a href="#高效编辑" class="headerlink" title="高效编辑"></a>高效编辑</h3><blockquote>
+<ul>
+<li>di” 光标在””之间，则删除””之间的内容</li>
+<li>yi( 光标在()之间，则复制()之间的内容</li>
+<li>vi[ 光标在[]之间，则选中[]之间的内容</li>
+<li>以上三种可以自由组合搭配，效率奇高，i(nner)</li>
+<li>dtx 删除字符直到遇见光标之后的第一个x字符</li>
+<li>ytx 复制字符直到遇见光标之后的第一个x字符</li>
+</ul>
+</blockquote>
+<h3 id="标记和宏-macro"><a href="#标记和宏-macro" class="headerlink" title="标记和宏(macro)"></a>标记和宏(macro)</h3><blockquote>
+<ul>
+<li>ma 将当前位置标记为a，26个字母均可做标记，mb、mc等等；</li>
+<li>‘a 跳转到a标记的位置；</li>
+<li>这是一组很好的文档内标记方法，在文档中跳跃编辑时很有用；</li>
+<li>qa 将之后的所有键盘操作录制下来，直到再次在命令模式按下q，并存储在a中；</li>
+<li>@a 执行刚刚记录在a里面的键盘操作；</li>
+<li>@@ 执行上一次的macro操作；<br>宏操作是VIM最为神奇的操作之一，需要慢慢体会其强大之处；<br>VIM的基本操作，可以挖掘的东西非常多，不仅仅需要记忆，更需要自己去探索总结，熟练之后，效率会大幅度提升。后面会给出一些参考链接。</li>
+</ul>
+</blockquote>
 
       
     </div>
@@ -271,13 +377,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/18/Git-employ/">Git 使用问题</a></p>
+        <p><span>本文标题:</span><a href="/2016/03/21/Vim-employ/">VIM使用教程</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 JingZing 的个人博客">JingZing</a></p>
-        <p><span>发布时间:</span>2016年03月18日 - 11时30分</p>
-        <p><span>最后更新:</span>2016年03月18日 - 17时20分</p>
+        <p><span>发布时间:</span>2016年03月21日 - 17时30分</p>
+        <p><span>最后更新:</span>2016年03月21日 - 17时32分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/18/Git-employ/" title="Git 使用问题">http://yoursite.com/2016/03/18/Git-employ/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/18/Git-employ/　　作者: JingZing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/21/Vim-employ/" title="VIM使用教程">http://yoursite.com/2016/03/21/Vim-employ/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/21/Vim-employ/　　作者: JingZing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -290,18 +396,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/03/21/Vim-employ/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          VIM使用教程
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/03/07/Hexo-install/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo 使用</div>
+    <a href="/2016/03/18/Git-employ/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git 使用问题</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -312,7 +409,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-使用和问题总结"><span class="toc-number">1.</span> <span class="toc-text">Git 使用和问题总结 </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-解决github-push错误The-requested-URL-returned-error-403-Forbidden-while-accessing"><span class="toc-number">1.1.</span> <span class="toc-text">1.解决github push错误The requested URL returned error: 403 Forbidden while accessing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用git-提交的时候提示以下内容："><span class="toc-number">1.1.1.</span> <span class="toc-text">使用git 提交的时候提示以下内容：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决办法："><span class="toc-number">1.1.2.</span> <span class="toc-text">解决办法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark-下。"><span class="toc-number">1.1.3.</span> <span class="toc-text">总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark 下。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-git-pull-push没有指定branch报错的解决方法"><span class="toc-number">1.2.</span> <span class="toc-text">2.git pull push没有指定branch报错的解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git-执行git-push-和git-pull的操作时候，经常看到下面的提示："><span class="toc-number">1.2.1.</span> <span class="toc-text">git 执行git push 和git pull的操作时候，经常看到下面的提示：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在高版本的-git下面，也许会看见这样的提示："><span class="toc-number">1.2.2.</span> <span class="toc-text">在高版本的 git下面，也许会看见这样的提示：</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#VIM-使用教程"><span class="toc-number">1.</span> <span class="toc-text">VIM 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本操作-以下介绍的键盘操作，都是大小写敏感的，并且要在命令模式下完成，需注意-："><span class="toc-number">1.1.</span> <span class="toc-text">基本操作(以下介绍的键盘操作，都是大小写敏感的，并且要在命令模式下完成，需注意)：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#以字为单位的移动"><span class="toc-number">1.1.1.</span> <span class="toc-text">以字为单位的移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#以词为单位的移动："><span class="toc-number">1.1.2.</span> <span class="toc-text">以词为单位的移动：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行移动："><span class="toc-number">1.1.3.</span> <span class="toc-text">行移动：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#段落移动："><span class="toc-number">1.1.4.</span> <span class="toc-text">段落移动：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#跳跃移动："><span class="toc-number">1.1.5.</span> <span class="toc-text">跳跃移动：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#向前搜索光标当前所在的字"><span class="toc-number">2.</span> <span class="toc-text">向前搜索光标当前所在的字</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本编辑"><span class="toc-number">2.1.</span> <span class="toc-text">基本编辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#修改"><span class="toc-number">2.1.1.</span> <span class="toc-text">修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除"><span class="toc-number">2.1.2.</span> <span class="toc-text">删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复制粘贴"><span class="toc-number">2.1.3.</span> <span class="toc-text">复制粘贴</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进阶操作"><span class="toc-number">2.2.</span> <span class="toc-text">进阶操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#重复操作"><span class="toc-number">2.2.1.</span> <span class="toc-text">重复操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#高效编辑"><span class="toc-number">2.2.2.</span> <span class="toc-text">高效编辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标记和宏-macro"><span class="toc-number">2.2.3.</span> <span class="toc-text">标记和宏(macro)</span></a></li></ol></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -374,7 +471,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/03/18/Git-employ/" data-title="Git 使用问题" data-url="http://yoursite.com/2016/03/18/Git-employ/"></div>
+    <div class="ds-thread" data-thread-key="2016/03/21/Vim-employ/" data-title="VIM使用教程" data-url="http://yoursite.com/2016/03/21/Vim-employ/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -397,13 +494,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/03/21/Vim-employ/" title="上一篇: VIM使用教程">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/03/07/Hexo-install/" title="下一篇: Hexo 使用">
+            <a href="/2016/03/18/Git-employ/" title="下一篇: Git 使用问题">
                 <i class="fa fa-angle-right"></i>
             </a>
         

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>新一代Java模板引擎Thymeleaf | 似水流年</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Thymeleaf是一款用于渲染XML/XHTML/HTML5内容的模板引擎">
+<meta property="og:type" content="article">
+<meta property="og:title" content="新一代Java模板引擎Thymeleaf">
+<meta property="og:url" content="http://jingzing.github.io/2016/04/03/Thymeleaf-tutorial/index.html">
+<meta property="og:site_name" content="似水流年">
+<meta property="og:description" content="Thymeleaf是一款用于渲染XML/XHTML/HTML5内容的模板引擎">
+<meta property="og:updated_time" content="2016-04-11T09:15:08.347Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="新一代Java模板引擎Thymeleaf">
+<meta name="twitter:description" content="Thymeleaf是一款用于渲染XML/XHTML/HTML5内容的模板引擎">
+  
+    <link rel="alternative" href="/atom.xml" title="似水流年" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+  
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/meLife.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/">JingZing</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="mailto:louiswang0898@gmail.com" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                            
+                                <a class="fl weibo" target="_blank" href="http://weibo.com/207123398" title="weibo">weibo</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Thymeleaf/" style="font-size: 10px;">Thymeleaf</a> <a href="/tags/article/" style="font-size: 10px;">article</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a> <a href="/tags/tutorial/" style="font-size: 20px;">tutorial</a> <a href="/tags/教程/" style="font-size: 10px;">教程</a> <a href="/tags/模板/" style="font-size: 10px;">模板</a> <a href="/tags/知识/" style="font-size: 10px;">知识</a> <a href="/tags/问题/" style="font-size: 10px;">问题</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/stars/wangyj0898">wangyj0898</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">心静自然。。。</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">JingZing</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/meLife.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">JingZing</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="mailto:louiswang0898@gmail.com" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/luuman" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="http://weibo.com/207123398" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-Thymeleaf-tutorial" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/03/Thymeleaf-tutorial/" class="article-date">
+      <time datetime="2016-04-03T03:30:00.000Z" itemprop="datePublished">2016-04-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      新一代Java模板引擎Thymeleaf
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Thymeleaf/">Thymeleaf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模板/">模板</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>   <strong> Thymeleaf </strong>是一款用于渲染XML/XHTML/HTML5内容的模板引擎。<br>类似JSP，Velocity，FreeMaker等，它也可以轻易的与Spring MVC等Web框架进行集成作为Web应用的模板引擎。<br>与其它模板引擎相比，Thymeleaf最大的特点是能够直接在浏览器中打开并正确显示模板页面，而不需要启动整个Web应用。</p>
+<h1 id="本文由Ricky创作，原文出处"><a href="#本文由Ricky创作，原文出处" class="headerlink" title="本文由Ricky创作，原文出处   "></a><a href="http://www.tianmaying.com/tutorial/using-thymeleaf" target="_blank" rel="external">本文由Ricky创作，原文出处</a>   </h1><h2 id="Thymeleaf初探"><a href="#Thymeleaf初探" class="headerlink" title="Thymeleaf初探"></a>Thymeleaf初探</h2><h3 id="相比于其他的模板引擎，Thymeleaf最大的特点是通过HTML的标签属性渲染标签内容，以下是一个Thymeleaf模板例子："><a href="#相比于其他的模板引擎，Thymeleaf最大的特点是通过HTML的标签属性渲染标签内容，以下是一个Thymeleaf模板例子：" class="headerlink" title="相比于其他的模板引擎，Thymeleaf最大的特点是通过HTML的标签属性渲染标签内容，以下是一个Thymeleaf模板例子："></a>相比于其他的模板引擎，Thymeleaf最大的特点是通过HTML的标签属性渲染标签内容，以下是一个Thymeleaf模板例子：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html SYSTEM &quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;</span><br><span class="line">      xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</span><br><span class="line"></span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;Good Thymes Virtual Grocery&lt;/title&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot; </span><br><span class="line">          href=&quot;../../css/gtvg.css&quot; th:href=&quot;@&#123;/css/gtvg.css&#125;&quot; /&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line"></span><br><span class="line">  &lt;body&gt;</span><br><span class="line"></span><br><span class="line">    &lt;p th:text=&quot;#&#123;home.welcome&#125;&quot;&gt;Welcome to our grocery store!&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">  &lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>这是一段标准的HTML代码，这也就意味着通过浏览器直接打开它是可以正确解析它的结构并看到页面的样子。<br>相比去其他的模板引擎在指定的位置通过${}等表达式进行渲染，Thymeleaf则是一种针对HTML/XML定制的模板语言（当然它可以被扩展），它通过标签中的th:text属性来填充该标签的一段内容。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">上例中，&lt;p th:text=&quot;#&#123;home.welcome&#125;&quot;&gt;Welcome to our grocery store!&lt;/p&gt;</span><br><span class="line">意味着&lt;p&gt;标签中的内容会被表达式#&#123;home.welcome&#125;的值所替代，</span><br></pre></td></tr></table></figure></p>
+<p>无论模板中它的内容是什么，之所以在模板中“多此一举“地填充它的内容，完全是为了它能够作为原型在浏览器中直接显示出来。</p>
+<h2 id="标准表达式语法"><a href="#标准表达式语法" class="headerlink" title="标准表达式语法"></a>标准表达式语法</h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>Thymeleaf模板引擎在进行模板渲染时，还会附带一个Context存放进行模板渲染的变量，在模板中定义的表达式本质上就是从Context中获取对应的变量的值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a th:href=&quot;@&#123;http://www.thymeleaf.org&#125;&quot;&gt;Thymeleaf&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+<p>同时也能够支持相对路径URL：</p>
+<blockquote>
+<ul>
+<li>当前页面相对路径URL——user/login.html，通常不推荐这样写。</li>
+<li>Context相关URL——/static/css/style.css<br>另外，如果需要Thymeleaf对URL进行渲染，那么务必使用th:href，th:src等属性，下面是一个例子<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- Will produce &apos;http://localhost:8080/gtvg/order/details?orderId=3&apos; (plus rewriting) --&gt;</span><br><span class="line">&lt;a href=&quot;details.html&quot; </span><br><span class="line">   th:href=&quot;@&#123;http://localhost:8080/gtvg/order/details(orderId=$&#123;o.id&#125;)&#125;&quot;&gt;view&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- Will produce &apos;/gtvg/order/details?orderId=3&apos; (plus rewriting) --&gt;</span><br><span class="line">&lt;a href=&quot;details.html&quot; th:href=&quot;@&#123;/order/details(orderId=$&#123;o.id&#125;)&#125;&quot;&gt;view&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- Will produce &apos;/gtvg/order/3/details&apos; (plus rewriting) --&gt;</span><br><span class="line">&lt;a href=&quot;details.html&quot; th:href=&quot;@&#123;/order/&#123;orderId&#125;/details(orderId=$&#123;o.id&#125;)&#125;&quot;&gt;view&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<h4 id="几点说明："><a href="#几点说明：" class="headerlink" title="几点说明："></a>几点说明：</h4><blockquote>
+<ul>
+<li>上例中URL最后的(orderId=${o.id})表示将括号内的内容作为URL参数处理，该语法避免使用字符串拼接，大大提高了可读性</li>
+<li>@{…}表达式中可以通过{orderId}访问Context中的orderId变量</li>
+<li>@{/order}是Context相关的相对路径，在渲染时会自动添加上当前Web应用的Context名字，假设context名字为app，那么结果应该是/app/order</li>
+</ul>
+</blockquote>
+<h3 id="字符串替换"><a href="#字符串替换" class="headerlink" title="字符串替换"></a>字符串替换</h3><p>很多时候可能我们只需要对一大段文字中的某一处地方进行替换，可以通过字符串拼接操作完成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span th:text=&quot;&apos;Welcome to our application, &apos; + $&#123;user.name&#125; + &apos;!&apos;&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>一种更简洁的方式是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span th:text=&quot;|Welcome to our application, $&#123;user.name&#125;!|&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>当然这种形式限制比较多，|…|中只能包含变量表达式${…}，不能包含其他常量、条件表达式等。</p>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p>在表达式中可以使用各类算术运算符，例如+, -, *, /, %<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">th:with=&quot;isEven=($&#123;prodStat.count&#125; % 2 == 0)&quot;</span><br></pre></td></tr></table></figure></p>
+<p>逻辑运算符&gt;, &lt;, &lt;=’,&gt;=，==,!=都可以使用，唯一需要注意的是使用&lt;,&gt;`时需要用它的HTML转义符：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">th:if=&quot;$&#123;prodStat.count&#125; &amp;gt; 1&quot;</span><br><span class="line">th:text=&quot;&apos;Execution mode is &apos; + ( ($&#123;execMode&#125; == &apos;dev&apos;)? &apos;Development&apos; : &apos;Production&apos;)&quot;</span><br></pre></td></tr></table></figure></p>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p>渲染列表数据是一种非常常见的场景，例如现在有n条记录需要渲染成一个表格<table>，该数据集合必须是可以遍历的，使用th:each标签：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;h1&gt;Product list&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line">  &lt;table&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">      &lt;th&gt;NAME&lt;/th&gt;</span><br><span class="line">      &lt;th&gt;PRICE&lt;/th&gt;</span><br><span class="line">      &lt;th&gt;IN STOCK&lt;/th&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;tr th:each=&quot;prod : $&#123;prods&#125;&quot;&gt;</span><br><span class="line">      &lt;td th:text=&quot;$&#123;prod.name&#125;&quot;&gt;Onions&lt;/td&gt;</span><br><span class="line">      &lt;td th:text=&quot;$&#123;prod.price&#125;&quot;&gt;2.41&lt;/td&gt;</span><br><span class="line">      &lt;td th:text=&quot;$&#123;prod.inStock&#125;? #&#123;true&#125; : #&#123;false&#125;&quot;&gt;yes&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">  &lt;/table&gt;</span><br><span class="line"></span><br><span class="line">  &lt;p&gt;</span><br><span class="line">    &lt;a href=&quot;../home.html&quot; th:href=&quot;@&#123;/&#125;&quot;&gt;Return to home&lt;/a&gt;</span><br><span class="line">  &lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></table></p>
+<p>可以看到，需要在被循环渲染的元素（这里是<tr>）中加入th:each标签，其中th:each=”prod : ${prods}”意味着对集合变量prods进行遍历，循环变量是prod在循环体中可以通过表达式访问。</tr></p>
+<h3 id="条件求值"><a href="#条件求值" class="headerlink" title="条件求值"></a>条件求值</h3><p><strong><em> If/Unless </em></strong><br>Thymeleaf中使用th:if和th:unless属性进行条件判断，下面的例子中，<a>标签只有在th:if中条件成立时才显示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a th:href=&quot;@&#123;/login&#125;&quot; th:if=$&#123;session.user != null&#125;&gt;Login&lt;/a&gt;</span><br></pre></td></tr></table></figure></a></p>
+<p>th:unless于th:if恰好相反，只有表达式中的条件不成立，才会显示其内容。</p>
+<p><strong><em> Switch </em></strong><br>Thymeleaf同样支持多路选择Switch结构：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div th:switch=&quot;$&#123;user.role&#125;&quot;&gt;</span><br><span class="line">  &lt;p th:case=&quot;&apos;admin&apos;&quot;&gt;User is an administrator&lt;/p&gt;</span><br><span class="line">  &lt;p th:case=&quot;#&#123;roles.manager&#125;&quot;&gt;User is a manager&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div th:switch=&quot;$&#123;user.role&#125;&quot;&gt;</span><br><span class="line">  &lt;p th:case=&quot;&apos;admin&apos;&quot;&gt;User is an administrator&lt;/p&gt;</span><br><span class="line">  &lt;p th:case=&quot;#&#123;roles.manager&#125;&quot;&gt;User is a manager&lt;/p&gt;</span><br><span class="line">  &lt;p th:case=&quot;*&quot;&gt;User is some other thing&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="Utilities"><a href="#Utilities" class="headerlink" title="Utilities"></a>Utilities</h3><p>为了模板更加易用，Thymeleaf还提供了一系列Utility对象（内置于Context中），可以通过#直接访问：</p>
+<blockquote>
+<ul>
+<li>#dates</li>
+<li>#calendars</li>
+<li>#numbers</li>
+<li>#strings</li>
+<li>arrays</li>
+<li>lists</li>
+<li>sets</li>
+<li>maps</li>
+<li>…<br>下面用一段代码来举例一些常用的方法：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#dates</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * Format date with the specified pattern</span><br><span class="line"> * Also works with arrays, lists or sets</span><br><span class="line"> */</span><br><span class="line">$&#123;#dates.format(date, &apos;dd/MMM/yyyy HH:mm&apos;)&#125;</span><br><span class="line">$&#123;#dates.arrayFormat(datesArray, &apos;dd/MMM/yyyy HH:mm&apos;)&#125;</span><br><span class="line">$&#123;#dates.listFormat(datesList, &apos;dd/MMM/yyyy HH:mm&apos;)&#125;</span><br><span class="line">$&#123;#dates.setFormat(datesSet, &apos;dd/MMM/yyyy HH:mm&apos;)&#125;</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * Create a date (java.util.Date) object for the current date and time</span><br><span class="line"> */</span><br><span class="line">$&#123;#dates.createNow()&#125;</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * Create a date (java.util.Date) object for the current date (time set to 00:00)</span><br><span class="line"> */</span><br><span class="line">$&#123;#dates.createToday()&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#strings</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * Check whether a String is empty (or null). Performs a trim() operation before check</span><br><span class="line"> * Also works with arrays, lists or sets</span><br><span class="line"> */</span><br><span class="line">$&#123;#strings.isEmpty(name)&#125;</span><br><span class="line">$&#123;#strings.arrayIsEmpty(nameArr)&#125;</span><br><span class="line">$&#123;#strings.listIsEmpty(nameList)&#125;</span><br><span class="line">$&#123;#strings.setIsEmpty(nameSet)&#125;</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * Check whether a String starts or ends with a fragment</span><br><span class="line"> * Also works with arrays, lists or sets</span><br><span class="line"> */</span><br><span class="line">$&#123;#strings.startsWith(name,&apos;Don&apos;)&#125;                  // also array*, list* and set*</span><br><span class="line">$&#123;#strings.endsWith(name,endingFragment)&#125;           // also array*, list* and set*</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * Compute length</span><br><span class="line"> * Also works with arrays, lists or sets</span><br><span class="line"> */</span><br><span class="line">$&#123;#strings.length(str)&#125;</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * Null-safe comparison and concatenation</span><br><span class="line"> */</span><br><span class="line">$&#123;#strings.equals(str)&#125;</span><br><span class="line">$&#123;#strings.equalsIgnoreCase(str)&#125;</span><br><span class="line">$&#123;#strings.concat(str)&#125;</span><br><span class="line">$&#123;#strings.concatReplaceNulls(str)&#125;</span><br><span class="line">cle</span><br><span class="line">/*</span><br><span class="line"> * Random</span><br><span class="line"> */</span><br><span class="line">$&#123;#strings.randomAlphanumeric(count)&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="页面即原型"><a href="#页面即原型" class="headerlink" title="页面即原型"></a>页面即原型</h2><p><strong><em> 在Web开发过程中一个绕不开的话题就是前端工程师与后端工程师的写作，在传统Java Web开发过程中，<br>前端工程师和后端工程师一样，也需要安装一套完整的开发环境，然后各类Java IDE中修改模板、静态资源文件，<br>启动/重启/重新加载应用服务器，刷新页面查看最终效果。<br>但实际上前端工程师的职责更多应该关注于页面本身而非后端，使用JSP，Velocity等传统的Java模板引擎很难做到这一点，<br>因为它们必须在应用服务器中渲染完成后才能在浏览器中看到结果，而Thymeleaf从根本上颠覆了这一过程，<br>通过属性进行模板渲染不会引入任何新的浏览器不能识别的标签，例如JSP中的<form:input>，不会在Tag内部写表达式。<br>整个页面直接作为HTML文件用浏览器打开，几乎就可以看到最终的效果，这大大解放了前端工程师的生产力，<br>它们的最终交付物就是纯的HTML/CSS/JavaScript文件。 </form:input></em></strong></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/04/03/Thymeleaf-tutorial/">新一代Java模板引擎Thymeleaf</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 JingZing 的个人博客">JingZing</a></p>
+        <p><span>发布时间:</span>2016年04月03日 - 11时30分</p>
+        <p><span>最后更新:</span>2016年04月11日 - 17时15分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/04/03/Thymeleaf-tutorial/" title="新一代Java模板引擎Thymeleaf">http://jingzing.github.io/2016/04/03/Thymeleaf-tutorial/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://jingzing.github.io/2016/04/03/Thymeleaf-tutorial/　　作者: JingZing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2016/04/04/Spring-boot-tutorial/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Spring-boot 学习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/03/28/Work-life/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">优秀的程序员不会觉得累成狗是一种荣</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#本文由Ricky创作，原文出处"><span class="toc-number">1.</span> <span class="toc-text">本文由Ricky创作，原文出处   </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Thymeleaf初探"><span class="toc-number">1.1.</span> <span class="toc-text">Thymeleaf初探</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#相比于其他的模板引擎，Thymeleaf最大的特点是通过HTML的标签属性渲染标签内容，以下是一个Thymeleaf模板例子："><span class="toc-number">1.1.1.</span> <span class="toc-text">相比于其他的模板引擎，Thymeleaf最大的特点是通过HTML的标签属性渲染标签内容，以下是一个Thymeleaf模板例子：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标准表达式语法"><span class="toc-number">1.2.</span> <span class="toc-text">标准表达式语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#变量"><span class="toc-number">1.2.1.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#几点说明："><span class="toc-number">1.2.1.1.</span> <span class="toc-text">几点说明：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串替换"><span class="toc-number">1.2.2.</span> <span class="toc-text">字符串替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符"><span class="toc-number">1.2.3.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环"><span class="toc-number">1.2.4.</span> <span class="toc-text">循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#条件求值"><span class="toc-number">1.2.5.</span> <span class="toc-text">条件求值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Utilities"><span class="toc-number">1.2.6.</span> <span class="toc-text">Utilities</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#页面即原型"><span class="toc-number">1.3.</span> <span class="toc-text">页面即原型</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/04/03/Thymeleaf-tutorial/" data-title="新一代Java模板引擎Thymeleaf" data-url="http://jingzing.github.io/2016/04/03/Thymeleaf-tutorial/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"jingzing"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/04/04/Spring-boot-tutorial/" title="上一篇: Spring-boot 学习">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2016/03/28/Work-life/" title="下一篇: 优秀的程序员不会觉得累成狗是一种荣">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/04/11/Redis-tutorial/">Redis 教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/04/Spring-boot-tutorial/">Spring-boot 学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/03/Thymeleaf-tutorial/">新一代Java模板引擎Thymeleaf</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/28/Work-life/">优秀的程序员不会觉得累成狗是一种荣</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/21/Vim-employ/">VIM使用教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/18/Git-employ/">Git 使用问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/07/Hexo-install/">Hexo 使用</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 JingZing
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 21;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+  </div>
+</body>
+</html>

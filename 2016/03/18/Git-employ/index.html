@@ -8,10 +8,10 @@
   <meta name="description" content="Git 使用过程中碰到的问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 使用问题">
-<meta property="og:url" content="http://yoursite.com/2016/03/18/Git-employ/index.html">
+<meta property="og:url" content="http://jingzing.github.io/2016/03/18/Git-employ/index.html">
 <meta property="og:site_name" content="似水流年">
 <meta property="og:description" content="Git 使用过程中碰到的问题">
-<meta property="og:updated_time" content="2016-03-18T09:20:23.576Z">
+<meta property="og:updated_time" content="2016-04-11T09:15:08.346Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 使用问题">
 <meta name="twitter:description" content="Git 使用过程中碰到的问题">
@@ -142,7 +142,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/article/" style="font-size: 10px;">article</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a> <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/tags/知识/" style="font-size: 10px;">知识</a> <a href="/tags/问题/" style="font-size: 10px;">问题</a>
+                        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Thymeleaf/" style="font-size: 10px;">Thymeleaf</a> <a href="/tags/article/" style="font-size: 10px;">article</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a> <a href="/tags/tutorial/" style="font-size: 20px;">tutorial</a> <a href="/tags/教程/" style="font-size: 10px;">教程</a> <a href="/tags/模板/" style="font-size: 10px;">模板</a> <a href="/tags/知识/" style="font-size: 10px;">知识</a> <a href="/tags/问题/" style="font-size: 10px;">问题</a>
                     </div>
                 </section>
                 
@@ -264,6 +264,27 @@
 <h3 id="总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark-下。"><a href="#总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark-下。" class="headerlink" title="总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark 下。"></a>总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark 下。</h3><h2 id="2-git-pull-push没有指定branch报错的解决方法"><a href="#2-git-pull-push没有指定branch报错的解决方法" class="headerlink" title="2.git pull push没有指定branch报错的解决方法"></a>2.git pull push没有指定branch报错的解决方法</h2><p><a href="https://www.netroby.com/view/3203" target="_blank" rel="external">参考链接</a></p>
 <h3 id="git-执行git-push-和git-pull的操作时候，经常看到下面的提示："><a href="#git-执行git-push-和git-pull的操作时候，经常看到下面的提示：" class="headerlink" title="git 执行git push 和git pull的操作时候，经常看到下面的提示："></a>git 执行git push 和git pull的操作时候，经常看到下面的提示：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">You asked me to pull without telling me which branch you</span><br><span class="line">want to merge with, and &apos;branch.dev.merge&apos; in</span><br><span class="line">your configuration file does not tell me, either. Please</span><br><span class="line">specify which branch you want to use on the command line and</span><br><span class="line">try again (e.g. &apos;git pull &lt;repository&gt; &lt;refspec&gt;&apos;).</span><br><span class="line">See git-pull(1) for details.</span><br><span class="line"></span><br><span class="line">If you often merge with the same branch, you may want to</span><br><span class="line">use something like the following in your configuration file:</span><br><span class="line"></span><br><span class="line">[branch &quot;dev&quot;]</span><br><span class="line">remote = &lt;nickname&gt;</span><br><span class="line">merge = &lt;remote-ref&gt;</span><br><span class="line"></span><br><span class="line">[remote &quot;&lt;nickname&gt;&quot;]</span><br><span class="line">url = &lt;url&gt;</span><br><span class="line">fetch = &lt;refspec&gt;</span><br><span class="line"></span><br><span class="line">See git-config(1) for details.</span><br></pre></td></tr></table></figure>
 <h3 id="在高版本的-git下面，也许会看见这样的提示："><a href="#在高版本的-git下面，也许会看见这样的提示：" class="headerlink" title="在高版本的 git下面，也许会看见这样的提示："></a>在高版本的 git下面，也许会看见这样的提示：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">There is no tracking information for the current branch.</span><br><span class="line"></span><br><span class="line">Please specify which branch you want to merge with.</span><br><span class="line"></span><br><span class="line">See git-pull(1) for details</span><br><span class="line"></span><br><span class="line">git pull &lt;remote&gt; &lt;branch&gt;</span><br><span class="line"></span><br><span class="line">If you wish to set tracking information for this branch you can do so with</span><br><span class="line"></span><br><span class="line">git branch --set-upstream master origin/&lt;branch&gt;</span><br><span class="line"></span><br><span class="line">看到第二个提示，我们现在知道了一种解决方案。也就是指定当前工作目录工作分支，跟远程的仓库，分支之间的链接关系。</span><br><span class="line"></span><br><span class="line">比如我们设置master对应远程仓库的master分支</span><br><span class="line"></span><br><span class="line">git branch --set-upstream master origin/master</span><br><span class="line"></span><br><span class="line">这样在我们每次想push或者pull的时候，只需要 输入git push 或者git pull即可。</span><br><span class="line"></span><br><span class="line">在此之前，我们必须要指定想要push或者pull的远程分支。</span><br><span class="line"></span><br><span class="line">git push origin master</span><br><span class="line"></span><br><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+<h2 id="Hexo部署时提示Fatal：-Could-not-read-from-remote-repository的问题处理"><a href="#Hexo部署时提示Fatal：-Could-not-read-from-remote-repository的问题处理" class="headerlink" title="Hexo部署时提示Fatal： Could not read from remote repository的问题处理"></a>Hexo部署时提示Fatal： Could not read from remote repository的问题处理</h2><p><a href="http://idealife.github.io/2015/10/02/Hexo%E9%83%A8%E7%BD%B2%E6%97%B6%E6%8F%90%E7%A4%BAfatal-Could-not-read-from-remote-repository%E7%9A%84%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86/" target="_blank" rel="external">原文出处</a><br>第一次在Mac中配置好了hexo,发布的时候却一直提示：<br>Error: Permission denied (publickey). fatal: Could not read from remote repository.<br>分析这个错误提示大致可以推断出是公钥配置的问题引起的。</p>
+<p>但是github中我已经配置好了当前的公钥信息了，再次检查公钥。</p>
+<blockquote>
+<ul>
+<li>0、github中公钥重新配置了一遍</li>
+<li>1、git clone可以正确执行。</li>
+<li>2、ssh -T idealife@github.com<br>也提示：Hi defnngj You’ve successfully authenticated, but GitHub does not provide shell access.<br>说明配置的公钥没有问题。<br>就是在执行sudo hexo deploy的时候报公钥问题。</li>
+</ul>
+</blockquote>
+<p>为什么要加sudo呢？<br>在执行hexo命令时，如果不提权，就会一直提示db.json文件的写权限的错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unhandled rejection Error: EACCES: permission denied, open &apos;/Users/idealife/Developer/blog/db.json&apos; at Error (native)</span><br></pre></td></tr></table></figure></p>
+<p>所以进行了权限提升。<br>以前一直是在window环境中配置，对于权限的认识比较浅。突然意识到，就是sudo引起的问题。</p>
+<p>因为我生成公钥的命令是ssh-keygen -t rsa -C “idealife@github.com”<br>没有加sudo，生成的公钥是当前用户的，路径是 /Users/idealife/.ssh。而sudo hexo deploy命令执行的时候应该会去读取的root用户的公钥，很显然root下还没有对应的公钥信息生成。</p>
+<p>随即立即验证这个推测。</p>
+<blockquote>
+<ul>
+<li>1、为root生成publickey:sudo ssh-keygen -t rsa -C “idealife@github.com”，对应路径为/var/root/.ssh</li>
+<li>2、提取公钥信息并配置到github中。问题又来了，在UI界面中是无法访问到/var下的root文件夹的。我们可以通过sudo cat /var/root/.ssh/id_rsa.pub可以绕开这个问题。</li>
+<li>3、执行sudo hexo deploy，部署成功！</li>
+</ul>
+</blockquote>
+<p>总结：在Linux或者UNIX环境中一定要注意权限问题！</p>
 
       
     </div>
@@ -275,10 +296,10 @@
         <p><span>本文标题:</span><a href="/2016/03/18/Git-employ/">Git 使用问题</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 JingZing 的个人博客">JingZing</a></p>
         <p><span>发布时间:</span>2016年03月18日 - 11时30分</p>
-        <p><span>最后更新:</span>2016年03月18日 - 17时20分</p>
+        <p><span>最后更新:</span>2016年04月11日 - 17时15分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/18/Git-employ/" title="Git 使用问题">http://yoursite.com/2016/03/18/Git-employ/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/18/Git-employ/　　作者: JingZing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/18/Git-employ/" title="Git 使用问题">http://jingzing.github.io/2016/03/18/Git-employ/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://jingzing.github.io/2016/03/18/Git-employ/　　作者: JingZing" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -313,7 +334,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-使用和问题总结"><span class="toc-number">1.</span> <span class="toc-text">Git 使用和问题总结 </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-解决github-push错误The-requested-URL-returned-error-403-Forbidden-while-accessing"><span class="toc-number">1.1.</span> <span class="toc-text">1.解决github push错误The requested URL returned error: 403 Forbidden while accessing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用git-提交的时候提示以下内容："><span class="toc-number">1.1.1.</span> <span class="toc-text">使用git 提交的时候提示以下内容：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决办法："><span class="toc-number">1.1.2.</span> <span class="toc-text">解决办法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark-下。"><span class="toc-number">1.1.3.</span> <span class="toc-text">总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark 下。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-git-pull-push没有指定branch报错的解决方法"><span class="toc-number">1.2.</span> <span class="toc-text">2.git pull push没有指定branch报错的解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git-执行git-push-和git-pull的操作时候，经常看到下面的提示："><span class="toc-number">1.2.1.</span> <span class="toc-text">git 执行git push 和git pull的操作时候，经常看到下面的提示：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在高版本的-git下面，也许会看见这样的提示："><span class="toc-number">1.2.2.</span> <span class="toc-text">在高版本的 git下面，也许会看见这样的提示：</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-使用和问题总结"><span class="toc-number">1.</span> <span class="toc-text">Git 使用和问题总结 </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-解决github-push错误The-requested-URL-returned-error-403-Forbidden-while-accessing"><span class="toc-number">1.1.</span> <span class="toc-text">1.解决github push错误The requested URL returned error: 403 Forbidden while accessing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用git-提交的时候提示以下内容："><span class="toc-number">1.1.1.</span> <span class="toc-text">使用git 提交的时候提示以下内容：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决办法："><span class="toc-number">1.1.2.</span> <span class="toc-text">解决办法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark-下。"><span class="toc-number">1.1.3.</span> <span class="toc-text">总结：其实还不是很明白为什么这样是可以的，网上找的解决办法，先mark 下。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-git-pull-push没有指定branch报错的解决方法"><span class="toc-number">1.2.</span> <span class="toc-text">2.git pull push没有指定branch报错的解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git-执行git-push-和git-pull的操作时候，经常看到下面的提示："><span class="toc-number">1.2.1.</span> <span class="toc-text">git 执行git push 和git pull的操作时候，经常看到下面的提示：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在高版本的-git下面，也许会看见这样的提示："><span class="toc-number">1.2.2.</span> <span class="toc-text">在高版本的 git下面，也许会看见这样的提示：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo部署时提示Fatal：-Could-not-read-from-remote-repository的问题处理"><span class="toc-number">1.3.</span> <span class="toc-text">Hexo部署时提示Fatal： Could not read from remote repository的问题处理</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -375,7 +396,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2016/03/18/Git-employ/" data-title="Git 使用问题" data-url="http://yoursite.com/2016/03/18/Git-employ/"></div>
+    <div class="ds-thread" data-thread-key="2016/03/18/Git-employ/" data-title="Git 使用问题" data-url="http://jingzing.github.io/2016/03/18/Git-employ/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -409,7 +430,7 @@
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/28/Work-life/">优秀的程序员不会觉得累成狗是一种荣</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/21/Vim-employ/">VIM使用教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/18/Git-employ/">Git 使用问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/07/Hexo-install/">Hexo 使用</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/04/11/Redis-tutorial/">Redis 教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/04/Spring-boot-tutorial/">Spring-boot 学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/03/Thymeleaf-tutorial/">新一代Java模板引擎Thymeleaf</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/28/Work-life/">优秀的程序员不会觉得累成狗是一种荣</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/21/Vim-employ/">VIM使用教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/18/Git-employ/">Git 使用问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/07/Hexo-install/">Hexo 使用</a></li></ul>
     <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
